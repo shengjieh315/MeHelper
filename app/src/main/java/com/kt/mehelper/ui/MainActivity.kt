@@ -1,7 +1,8 @@
-package com.kt.mehelper
+package com.kt.mehelper.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kt.mehelper.R
 
 class MainActivity : AppCompatActivity() {
 

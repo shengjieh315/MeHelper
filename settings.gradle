@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':app-alpha'
 rootProject.name='MeHelper'
