@@ -11,15 +11,13 @@ abstract class BaseActivity : AppCompatActivity(){
     abstract val layoutId: Int
     lateinit var mContext : BaseActivity
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(layoutId)
         mContext = this
         try {
             initView(savedInstanceState)
         }catch (e : Throwable){}
-
     }
 
     abstract fun initView(savedInstanceState: Bundle?)
