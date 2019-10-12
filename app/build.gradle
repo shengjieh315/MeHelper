@@ -8,13 +8,13 @@ android {
     compileSdkVersion 28
     defaultConfig {
 
-//        applicationId deps.alpha.applicationId
-//        versionCode deps.alpha.versionCode
-//        versionName deps.alpha.versionName
+        applicationId deps.alpha.applicationId
+        versionCode deps.alpha.versionCode
+        versionName deps.alpha.versionName
 
-        applicationId deps.master.applicationId
-        versionCode deps.master.versionCode
-        versionName deps.master.versionName
+//        applicationId deps.second.applicationId
+//        versionCode deps.second.versionCode
+//        versionName deps.second.versionName
 
         minSdkVersion 21
         targetSdkVersion 28
@@ -47,7 +47,7 @@ dependencies {
 
 
 
-//    implementation project(deps.alpha.PACKAGE_SKIN)
-//    implementation project(deps.master.PACKAGE_SKIN)
+    implementation project(deps.alpha.PACKAGE_SKIN)
+//    implementation project(deps.second.PACKAGE_SKIN)
 
 }
