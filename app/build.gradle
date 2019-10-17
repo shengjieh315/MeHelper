@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
@@ -8,16 +8,11 @@ android {
     compileSdkVersion 28
     defaultConfig {
 
-        applicationId deps.alpha.applicationId
-        versionCode deps.alpha.versionCode
-        versionName deps.alpha.versionName
-
-//        applicationId deps.second.applicationId
-//        versionCode deps.second.versionCode
-//        versionName deps.second.versionName
 
         minSdkVersion 21
         targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,9 +40,5 @@ dependencies {
     implementation 'skin.support:skin-support-cardview:4.0.4'          // skin-support-cardview CardView 控件支持[可选]
     implementation 'skin.support:skin-support-constraint-layout:4.0.4' // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
 
-
-
-    implementation project(deps.alpha.PACKAGE_SKIN)
-//    implementation project(deps.second.PACKAGE_SKIN)
 
 }

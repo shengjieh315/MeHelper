@@ -4,17 +4,17 @@ buildscript {
     ext.kotlin_version = '1.3.41'
 
     ext.deps = [
-            'alpha': [
+            'alpha' : [
                     'applicationId': "com.kt.app_alpha",
                     'versionCode'  : 2019101201,
                     'versionName'  : "0.0.1",
-                    'PACKAGE_SKIN' : ":app-alpha"
+                    'PACKAGE_SKIN' : ":skin-alpha"
             ],
-            'second' : [
+            'second': [
                     'applicationId': "com.kt.app_second",
                     'versionCode'  : 2019101201,
                     'versionName'  : "0.0.1",
-                    'PACKAGE_SKIN' : ":app-second"
+                    'PACKAGE_SKIN' : ":skin-second"
             ]
     ]
 
