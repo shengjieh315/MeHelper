@@ -7,5 +7,7 @@ class ALPMainActivity : BaseActivity() {
     override val layoutId: Int = R.layout.alp_activity_main
 
     override fun initView(savedInstanceState: Bundle?) {
+
+
     }
 }
