@@ -2,17 +2,20 @@ package com.kt.mehelper.ui
 
 import android.os.Bundle
 import com.kt.mehelper.R
-import com.kt.mehelper.base.BaseActivity
-import skin.support.SkinCompatManager
+import com.kt.mehelper.base.BaseActivityUp
 
-class MainActivity : BaseActivity() {
-
-    override val layoutId: Int = R.layout.activity_main
+class MainActivity : BaseActivityUp() {
 
     override fun initView(savedInstanceState: Bundle?) {
+        setContentView(R.layout.activity_main)
+        convertActivityToTranslucent(this)
+    }
 
-        // 恢复应用默认皮肤
-        SkinCompatManager.getInstance().restoreDefaultTheme()
+    override fun initListener(savedInstanceState: Bundle?) {
 
     }
+
+    override fun initData(savedInstanceState: Bundle?) {
+    }
+
 }
