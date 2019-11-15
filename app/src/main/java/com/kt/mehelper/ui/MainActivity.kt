@@ -2,20 +2,16 @@ package com.kt.mehelper.ui
 
 import android.os.Bundle
 import com.kt.mehelper.R
-import com.kt.mehelper.base.BaseActivityUp
+import com.kt.mehelper.base.BaseActivity
 
-class MainActivity : BaseActivityUp() {
+class MainActivity : BaseActivity() {
+
+    override val layoutId: Int = R.layout.activity_main
 
     override fun initView(savedInstanceState: Bundle?) {
-        setContentView(R.layout.activity_main)
         convertActivityToTranslucent(this)
     }
 
-    override fun initListener(savedInstanceState: Bundle?) {
 
-    }
-
-    override fun initData(savedInstanceState: Bundle?) {
-    }
 
 }
