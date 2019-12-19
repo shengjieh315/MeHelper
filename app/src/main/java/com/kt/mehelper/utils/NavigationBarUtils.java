@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.res.Resources;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.FitWindowsLinearLayout;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -14,20 +12,16 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
 
-import com.wbxm.icartoon.utils.screen.ScreenAdaptUtil;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.FitWindowsLinearLayout;
 
 import java.lang.reflect.Method;
-
-/**
- * Created by jianyang on 2016/12/5.
- */
 
 public class NavigationBarUtils {
 
 
-
     public static boolean hasNavBar(Context context) {
-        try{
+        try {
             if (Build.VERSION.SDK_INT >= 14) {
                 Resources res = context.getResources();
                 int resourceId = res.getIdentifier("config_showNavigationBar", "bool", "android");
@@ -46,7 +40,7 @@ public class NavigationBarUtils {
                 }
 
             }
-        }catch (Throwable e){
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 
@@ -55,9 +49,9 @@ public class NavigationBarUtils {
     }
 
 
-
     /**
      * 判断虚拟按键栏是否重写
+     *
      * @return
      */
     private static String getNavBarOverride() {
@@ -76,32 +70,34 @@ public class NavigationBarUtils {
     }
 
 
-
     private static int navigationBarHeight;
+
     /**
      * 获取虚拟按键栏高度
+     *
      * @param context
      * @return
      */
     public static int getNavigationBarHeight(Context context) {
-        if(navigationBarHeight>0){
-           return navigationBarHeight;
+        if (navigationBarHeight > 0) {
+            return navigationBarHeight;
         }
         int result = 0;
-        float scalePercent  = 0;
-        try{
-            if (hasNavBar(context)){
+        float scalePercent = 0;
+        try {
+            if (hasNavBar(context)) {
                 Resources res = context.getResources();
                 int resourceId = res.getIdentifier("navigation_bar_height", "dimen", "android");
                 if (resourceId > 0) {
                     result = res.getDimensionPixelSize(resourceId);
                 }
-                scalePercent = (ScreenAdaptUtil.getsNonCompatDensity() / res.getDisplayMetrics().density);
+
+                scalePercent = (res.getDisplayMetrics().density / res.getDisplayMetrics().density);
             }
-        }catch (Throwable e){
+        } catch (Throwable e) {
             e.printStackTrace();
         }
-        navigationBarHeight = (int) (result*scalePercent);
+        navigationBarHeight = (int) (result * scalePercent);
         return navigationBarHeight;
     }
 
@@ -120,7 +116,7 @@ public class NavigationBarUtils {
                 navigationBarHeight = layoutParams.bottomMargin;
             }
             return navigationBarHeight != 0;
-        }catch (Throwable e){
+        } catch (Throwable e) {
             return false;
         }
     }
