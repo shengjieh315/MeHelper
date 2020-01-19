@@ -11,7 +11,6 @@ class ALPMainActivity : BaseActivity() {
     override fun initView(savedInstanceState: Bundle?) {
 
         getRootView().setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }
